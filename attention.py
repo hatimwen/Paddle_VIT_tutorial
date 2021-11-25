@@ -10,7 +10,7 @@ import paddle.nn as nn
 paddle.set_device('cpu')
 
 class Attention(nn.Layer):
-    def __init__(self, embed_dim, num_heads, qkv_bias=False, qk_scale=None, dropout=0., **kwargs):
+    def __init__(self, embed_dim, num_heads, qkv_bias=False, qk_scale=None, dropout=0., attention_dropout=0.):
         super(Attention, self).__init__()
         self.embed_dim = embed_dim
         self.num_heads = num_heads
