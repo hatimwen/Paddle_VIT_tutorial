@@ -1,6 +1,6 @@
 # Paddle_VIT_tutorial
 
-Baidu PaddlePaddle `从零开始学视觉Transformer` Dr.Zhu's codes.
+Baidu PaddlePaddle `从零开始学视觉Transformer` Dr. Zhu's codes.
 
 感谢百度飞桨~加油！
 
