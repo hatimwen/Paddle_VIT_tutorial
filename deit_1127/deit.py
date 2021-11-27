@@ -177,13 +177,13 @@ class Deit(nn.Layer):
                  attention_dropout=0.,
                  droppath=0.):
         super().__init__()
-        self.patch_embbding = PatchEmbedding(224, 16, 3, 768)
+        self.patch_embedding = PatchEmbedding(224, 16, 3, 768)
         self.encoder = Encoder(embed_dim, depth)
         self.head = nn.Linear(embed_dim, num_classes)
         self.head_distill = nn.Linear(embed_dim, num_classes)
         
     def forward(self, x):
-        x = self.patch_embbding(x)
+        x = self.patch_embedding(x)
         x, x_distill = self.encoder(x)
         x = self.head(x)
         x_distill = self.head_distill(x_distill)
