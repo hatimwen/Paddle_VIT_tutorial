@@ -126,12 +126,12 @@ class EncoderLayer(nn.Layer):
     def forward(self, x):
         h = x   # residual
         x = self.attn_norm(x)
-        h = self.attn(h)
+        x = self.attn(x)
         x = x + h
 
         h = x
         x = self.mlp_norm(x)
-        h = self.mlp(x)
+        x = self.mlp(x)
         x = x + h
         return x
 
