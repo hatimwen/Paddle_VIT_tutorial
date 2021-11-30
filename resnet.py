@@ -9,7 +9,7 @@ import paddle.nn as nn
 #paddle.set_device('cpu')
 
 class Identity(nn.Layer):
-    def __init_(self):
+    def __init__(self):
         super().__init__()
 
     def forward(self, x):
